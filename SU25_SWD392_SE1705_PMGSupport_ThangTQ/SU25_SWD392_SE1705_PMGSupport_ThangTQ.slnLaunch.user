@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PMGSupport.ThangTQ.IdentityServer\\PMGSupport.ThangTQ.IdentityServer.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

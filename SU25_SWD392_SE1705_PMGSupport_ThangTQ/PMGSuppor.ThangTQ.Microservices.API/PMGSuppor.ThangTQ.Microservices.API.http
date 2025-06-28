@@ -1,0 +1,6 @@
+@PMGSuppor.ThangTQ.Microservices.API_HostAddress = http://localhost:5250
+
+GET {{PMGSuppor.ThangTQ.Microservices.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

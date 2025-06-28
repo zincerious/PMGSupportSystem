@@ -1,0 +1,14 @@
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\PMGSupport.ThangTQ.Repositories.csproj.AssemblyReference.cache
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\PMGSupport.ThangTQ.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\PMGSupport.ThangTQ.Repositories.AssemblyInfoInputs.cache
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\PMGSupport.ThangTQ.Repositories.AssemblyInfo.cs
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\PMGSupport.ThangTQ.Repositories.csproj.CoreCompileInputs.cache
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\bin\Debug\net8.0\PMGSupport.ThangTQ.Repositories.deps.json
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\bin\Debug\net8.0\PMGSupport.ThangTQ.Repositories.runtimeconfig.json
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\bin\Debug\net8.0\PMGSupport.ThangTQ.Repositories.dll
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\bin\Debug\net8.0\PMGSupport.ThangTQ.Repositories.pdb
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\PMGSupport.ThangTQ.Repositories.dll
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\refint\PMGSupport.ThangTQ.Repositories.dll
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\PMGSupport.ThangTQ.Repositories.pdb
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\PMGSupport.ThangTQ.Repositories.genruntimeconfig.cache
+D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSupport.ThangTQ.Repositories\obj\Debug\net8.0\ref\PMGSupport.ThangTQ.Repositories.dll

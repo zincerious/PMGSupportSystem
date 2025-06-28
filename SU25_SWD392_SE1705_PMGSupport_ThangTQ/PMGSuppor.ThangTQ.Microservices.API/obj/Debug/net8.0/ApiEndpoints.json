@@ -1,0 +1,152 @@
+[
+  {
+    "ContainingType": "PMGSuppor.ThangTQ.Microservices.API.Controllers.AssignmentController",
+    "Method": "GetAssignmentsAsync",
+    "RelativePath": "api/Assignment/assignments-admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "examniner",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "uploadedAt",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PMGSupport.ThangTQ.Repositories.Models.Assignment, PMGSupport.ThangTQ.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PMGSuppor.ThangTQ.Microservices.API.Controllers.AssignmentController",
+    "Method": "GetAssignmentsByExaminerAsync",
+    "RelativePath": "api/Assignment/assignments-examiner",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[PMGSupport.ThangTQ.Repositories.Models.Assignment, PMGSupport.ThangTQ.Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "PMGSuppor.ThangTQ.Microservices.API.Controllers.AssignmentController",
+    "Method": "UploadBarem",
+    "RelativePath": "api/Assignment/upload-barem/{assignmentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PMGSuppor.ThangTQ.Microservices.API.Controllers.AssignmentController",
+    "Method": "UploadExamPaper",
+    "RelativePath": "api/Assignment/upload-exam-paper",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PMGSuppor.ThangTQ.Microservices.API.Controllers.SubmissionController",
+    "Method": "UploadSubmission",
+    "RelativePath": "api/Submission/upload-submission/{assignmentId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assignmentId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "ZipFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PMGSuppor.ThangTQ.Microservices.API.Controllers.UserController",
+    "Method": "GoogleLogin",
+    "RelativePath": "api/User/google-login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idToken",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PMGSuppor.ThangTQ.Microservices.API.Controllers.UserController",
+    "Method": "Logout",
+    "RelativePath": "api/User/logout",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
