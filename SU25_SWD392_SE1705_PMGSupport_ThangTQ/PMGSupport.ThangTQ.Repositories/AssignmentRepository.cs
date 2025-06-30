@@ -144,5 +144,16 @@ namespace PMGSupport.ThangTQ.Repositories
                 .OrderByDescending(a => a.UploadedAt)
                 .ToListAsync();
         }
+
+        public async Task<(string? ExamFilePath, string? BaremFilePath)> GetExamFilesByAssignmentIdAsync(Guid id)
+        {
+            var assignment = await GetAssignmentByIdAsync(id);
+            if (assignment == null || string.IsNullOrEmpty(assignment.FilePath) || string.IsNullOrEmpty(assignment.BaremPath))
+            {
+                return (null, null);
+            }
+
+            return (assignment.FilePath, assignment.BaremPath);
+        }
     }
 }

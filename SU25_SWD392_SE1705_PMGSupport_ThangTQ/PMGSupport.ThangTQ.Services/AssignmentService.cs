@@ -18,6 +18,7 @@ namespace PMGSupport.ThangTQ.Services
         Task<bool> UploadBaremAsync(Guid assignmentId, string examinerId, IFormFile file, DateTime uploadedAt);
         Task<IEnumerable<Assignment>> GetAssignmentsByExaminerAsync(string examinerId);
         Task<(IEnumerable<Assignment> Items, int TotalCount)> GetPagedAssignmentsAsync(int page, int pageSize, string? examinerId, DateTime? uploadedAt, string? status);
+        Task<(string? ExamFilePath, string? BaremFilePath)> GetExamFilesByAssignmentIdAsync(Guid id);
     }
     public class AssignmentService : IAssignmentService
     {
@@ -31,9 +32,9 @@ namespace PMGSupport.ThangTQ.Services
             await _unitOfWork.AssignmentRepository.CreateAsync(assignment);
         }
 
-        public Task UploadExamPaper()
+        public async Task<(string? ExamFilePath, string? BaremFilePath)> GetExamFilesByAssignmentIdAsync(Guid id)
         {
-            throw new Exception();
+            return await _unitOfWork.AssignmentRepository.GetExamFilesByAssignmentIdAsync(id);
         }
 
         public async Task DeleteAssignmentAsync(Assignment assignment)

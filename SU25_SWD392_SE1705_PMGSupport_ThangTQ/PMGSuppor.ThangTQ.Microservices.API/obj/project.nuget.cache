@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3PSOzftDiVk=",
+  "dgSpecHash": "dqywkDyOJGI=",
   "success": true,
-  "projectFilePath": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj",
+  "projectFilePath": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\issei\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\issei\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

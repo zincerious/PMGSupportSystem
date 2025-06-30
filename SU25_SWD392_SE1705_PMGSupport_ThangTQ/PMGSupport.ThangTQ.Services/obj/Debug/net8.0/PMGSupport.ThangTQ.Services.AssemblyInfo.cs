@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PMGSupport.ThangTQ.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdc83692a51ef21c9a275a4d37ae225824ea8366")]
 [assembly: System.Reflection.AssemblyProductAttribute("PMGSupport.ThangTQ.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PMGSupport.ThangTQ.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

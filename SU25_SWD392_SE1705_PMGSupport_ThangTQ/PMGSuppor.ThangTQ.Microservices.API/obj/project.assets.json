@@ -5464,11 +5464,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj",
+      "projectUniqueName": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj",
       "projectName": "PMGSuppor.ThangTQ.Microservices.API",
-      "projectPath": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj",
+      "projectPath": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj",
       "packagesPath": "C:\\Users\\issei\\.nuget\\packages\\",
-      "outputPath": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\obj\\",
+      "outputPath": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5490,8 +5490,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj": {
-              "projectPath": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj"
+            "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj": {
+              "projectPath": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj"
             }
           }
         }
