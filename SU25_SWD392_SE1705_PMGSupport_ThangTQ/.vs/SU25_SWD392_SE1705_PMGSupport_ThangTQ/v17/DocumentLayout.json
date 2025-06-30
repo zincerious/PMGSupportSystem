@@ -1,46 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\",
+  "WorkspaceRootPath": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69B88585-B076-4A35-A3EA-0FABB4F83F3A}|PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsuppor.thangtq.microservices.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69B88585-B076-4A35-A3EA-0FABB4F83F3A}|PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj|solutionrelative:pmgsuppor.thangtq.microservices.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69B88585-B076-4A35-A3EA-0FABB4F83F3A}|PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsuppor.thangtq.microservices.api\\controllers\\submissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69B88585-B076-4A35-A3EA-0FABB4F83F3A}|PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj|solutionrelative:pmgsuppor.thangtq.microservices.api\\controllers\\submissioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69B88585-B076-4A35-A3EA-0FABB4F83F3A}|PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsuppor.thangtq.microservices.api\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69B88585-B076-4A35-A3EA-0FABB4F83F3A}|PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj|d:\\dotnet\\pmgsupportsystem\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsuppor.thangtq.microservices.api\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69B88585-B076-4A35-A3EA-0FABB4F83F3A}|PMGSuppor.ThangTQ.Microservices.API\\PMGSuppor.ThangTQ.Microservices.API.csproj|solutionrelative:pmgsuppor.thangtq.microservices.api\\controllers\\assignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{643604D8-4550-4649-85D2-23D7184299F5}|PMGSupport.ThangTQ.Repositories\\PMGSupport.ThangTQ.Repositories.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.repositories\\distributionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{643604D8-4550-4649-85D2-23D7184299F5}|PMGSupport.ThangTQ.Repositories\\PMGSupport.ThangTQ.Repositories.csproj|solutionrelative:pmgsupport.thangtq.repositories\\distributionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.services\\assignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|solutionrelative:pmgsupport.thangtq.services\\assignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.services\\submissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|solutionrelative:pmgsupport.thangtq.services\\submissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{643604D8-4550-4649-85D2-23D7184299F5}|PMGSupport.ThangTQ.Repositories\\PMGSupport.ThangTQ.Repositories.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.repositories\\submissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{643604D8-4550-4649-85D2-23D7184299F5}|PMGSupport.ThangTQ.Repositories\\PMGSupport.ThangTQ.Repositories.csproj|solutionrelative:pmgsupport.thangtq.repositories\\submissionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.services\\servicesprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|solutionrelative:pmgsupport.thangtq.services\\servicesprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{643604D8-4550-4649-85D2-23D7184299F5}|PMGSupport.ThangTQ.Repositories\\PMGSupport.ThangTQ.Repositories.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.repositories\\assignmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{643604D8-4550-4649-85D2-23D7184299F5}|PMGSupport.ThangTQ.Repositories\\PMGSupport.ThangTQ.Repositories.csproj|d:\\dotnet\\pmgsupportsystem\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.repositories\\assignmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{643604D8-4550-4649-85D2-23D7184299F5}|PMGSupport.ThangTQ.Repositories\\PMGSupport.ThangTQ.Repositories.csproj|solutionrelative:pmgsupport.thangtq.repositories\\assignmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|d:\\dotnet\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|solutionrelative:pmgsupport.thangtq.services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|d:\\dotnet\\pmgsupportsystem\\su25_swd392_se1705_pmgsupport_thangtq\\pmgsupport.thangtq.services\\assignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CC4EE36-807B-4BDD-97DF-E57F02A05C94}|PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj|solutionrelative:pmgsupport.thangtq.services\\assignmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,127 +70,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "PMGSuppor.ThangTQ.Microservices.API\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "PMGSuppor.ThangTQ.Microservices.API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-28T13:54:07.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DistributionRepository.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Repositories\\DistributionRepository.cs",
-              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Repositories\\DistributionRepository.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Repositories\\DistributionRepository.cs",
-              "RelativeToolTip": "PMGSupport.ThangTQ.Repositories\\DistributionRepository.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T08:09:40.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ServicesProvider.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\ServicesProvider.cs",
-              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Services\\ServicesProvider.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\ServicesProvider.cs",
-              "RelativeToolTip": "PMGSupport.ThangTQ.Services\\ServicesProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T21:06:17.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SubmissionService.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\SubmissionService.cs",
-              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Services\\SubmissionService.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\SubmissionService.cs",
-              "RelativeToolTip": "PMGSupport.ThangTQ.Services\\SubmissionService.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAgwFwAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T21:06:15.51Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SubmissionRepository.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Repositories\\SubmissionRepository.cs",
-              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Repositories\\SubmissionRepository.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Repositories\\SubmissionRepository.cs",
-              "RelativeToolTip": "PMGSupport.ThangTQ.Repositories\\SubmissionRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAcwBAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T17:27:25.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AssignmentService.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\AssignmentService.cs",
-              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Services\\AssignmentService.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\AssignmentService.cs",
-              "RelativeToolTip": "PMGSupport.ThangTQ.Services\\AssignmentService.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAcwFYAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:57:17.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AssignmentRepository.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Repositories\\AssignmentRepository.cs",
-              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Repositories\\AssignmentRepository.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Repositories\\AssignmentRepository.cs",
-              "RelativeToolTip": "PMGSupport.ThangTQ.Repositories\\AssignmentRepository.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAwwC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:57:11.599Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AssignmentController.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\Controllers\\AssignmentController.cs",
-              "RelativeDocumentMoniker": "PMGSuppor.ThangTQ.Microservices.API\\Controllers\\AssignmentController.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\Controllers\\AssignmentController.cs",
-              "RelativeToolTip": "PMGSuppor.ThangTQ.Microservices.API\\Controllers\\AssignmentController.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAQwF8AAAAeAAAAAAAAAA==",
+              "Title": "AssignmentService.cs",
+              "DocumentMoniker": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\AssignmentService.cs",
+              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Services\\AssignmentService.cs",
+              "ToolTip": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\AssignmentService.cs",
+              "RelativeToolTip": "PMGSupport.ThangTQ.Services\\AssignmentService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA9wBQAAABlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:57:04.468Z",
+              "WhenOpened": "2025-06-30T02:38:18.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SubmissionController.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\Controllers\\SubmissionController.cs",
-              "RelativeDocumentMoniker": "PMGSuppor.ThangTQ.Microservices.API\\Controllers\\SubmissionController.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\Controllers\\SubmissionController.cs",
-              "RelativeToolTip": "PMGSuppor.ThangTQ.Microservices.API\\Controllers\\SubmissionController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAACcAAABOAAAAAAAAAA==",
+              "Title": "AssignmentRepository.cs",
+              "DocumentMoniker": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Repositories\\AssignmentRepository.cs",
+              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Repositories\\AssignmentRepository.cs",
+              "ToolTip": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Repositories\\AssignmentRepository.cs",
+              "RelativeToolTip": "PMGSupport.ThangTQ.Repositories\\AssignmentRepository.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAAwJwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T16:57:03.75Z",
+              "WhenOpened": "2025-06-30T02:38:17.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\UserService.cs",
-              "RelativeDocumentMoniker": "PMGSupport.ThangTQ.Services\\UserService.cs",
-              "ToolTip": "D:\\DotNet\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\UserService.cs",
-              "RelativeToolTip": "PMGSupport.ThangTQ.Services\\UserService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBUAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AssignmentController.cs",
+              "DocumentMoniker": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\Controllers\\AssignmentController.cs",
+              "RelativeDocumentMoniker": "PMGSuppor.ThangTQ.Microservices.API\\Controllers\\AssignmentController.cs",
+              "ToolTip": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSuppor.ThangTQ.Microservices.API\\Controllers\\AssignmentController.cs",
+              "RelativeToolTip": "PMGSuppor.ThangTQ.Microservices.API\\Controllers\\AssignmentController.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAiwH0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T21:05:02.95Z"
+              "WhenOpened": "2025-06-30T02:38:10.025Z",
+              "EditorCaption": ""
             }
           ]
         }

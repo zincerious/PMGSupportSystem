@@ -187,3 +187,15 @@ D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.
 D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\bin\Debug\net8.0\UglyToad.PdfPig.Tokenization.dll
 D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\bin\Debug\net8.0\UglyToad.PdfPig.Tokens.dll
 D:\DotNet\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\bin\Debug\net8.0\UglyToad.PdfPig.dll
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.csproj.AssemblyReference.cache
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.AssemblyInfoInputs.cache
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.AssemblyInfo.cs
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.csproj.CoreCompileInputs.cache
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.MvcApplicationPartsAssemblyInfo.cs
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.MvcApplicationPartsAssemblyInfo.cache
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.sourcelink.json
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\scopedcss\bundle\PMGSuppor.ThangTQ.Microservices.API.styles.css
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.dll
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\refint\PMGSuppor.ThangTQ.Microservices.API.dll
+D:\DotNet\PMGSupportSystem\SU25_SWD392_SE1705_PMGSupport_ThangTQ\PMGSuppor.ThangTQ.Microservices.API\obj\Debug\net8.0\PMGSuppor.ThangTQ.Microservices.API.pdb
