@@ -1,0 +1,18 @@
+{
+  "JwtSettings": {
+    "Key": "EO6btVJg8usIlHbCO6MPl4JfvH5pmej9ZTuzvNK4EOdhWTdMdg",
+    "Issuer": "PMGSupportSystem",
+    "Audience": "PMGSupportClient",
+    "ExpirationInMinutes": 60
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=ZINCERIOUS;Initial Catalog=SWD392;Persist Security Info=True;User ID=sa;Password=12345;Encrypt=False"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

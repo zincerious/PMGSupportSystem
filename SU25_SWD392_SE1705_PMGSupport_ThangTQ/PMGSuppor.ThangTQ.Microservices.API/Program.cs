@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
-using PMGSuppor.ThangTQ.Repositories.ConfigurationModels;
 using PMGSupport.ThangTQ.Repositories;
+using PMGSupport.ThangTQ.Repositories.ConfigurationModels;
 using PMGSupport.ThangTQ.Repositories.DBContext;
 using PMGSupport.ThangTQ.Repositories.Helpers;
 using PMGSupport.ThangTQ.Services;
@@ -38,15 +38,23 @@ namespace PMGSuppor.ThangTQ.Microservices.API
             });
             builder.Services.AddDbContext<SWD392Context>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IAssignmentService, AssignmentService>();
             builder.Services.AddScoped<ISubmissionService, SubmissionService>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
+            builder.Services.AddScoped<IDistributionService, DistributionService>();
             builder.Services.AddScoped<IServicesProvider, ServicesProvider>();
+
             builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
-            builder.Services.AddSingleton(sp => sp.GetRequiredService<IOptions<JwtSettings>>().Value);
+            builder.Services.Configure<SmtpSettings>(builder.Configuration.GetSection("SmtpSettings"));
+
+            builder.Services.AddSingleton<JwtSettings>(sp => sp.GetRequiredService<IOptions<JwtSettings>>().Value);
             builder.Services.AddSingleton<JwtHelper>();
+
             builder.Services.AddHttpContextAccessor();
+
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -92,8 +100,8 @@ namespace PMGSuppor.ThangTQ.Microservices.API
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.MapControllers();
             app.UseStaticFiles();
+            app.MapControllers();
 
             app.Run();
         }

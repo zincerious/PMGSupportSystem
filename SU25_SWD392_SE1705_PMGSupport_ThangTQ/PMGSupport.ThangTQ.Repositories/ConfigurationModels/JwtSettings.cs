@@ -1,4 +1,4 @@
-﻿namespace PMGSuppor.ThangTQ.Repositories.ConfigurationModels
+﻿namespace PMGSupport.ThangTQ.Repositories.ConfigurationModels
 {
     public class JwtSettings
     {

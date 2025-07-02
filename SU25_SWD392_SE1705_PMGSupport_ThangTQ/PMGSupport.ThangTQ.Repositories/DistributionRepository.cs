@@ -20,5 +20,29 @@ namespace PMGSupport.ThangTQ.Repositories
                 .Include(d => d.Lecturer)
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<AssignmentDistribution>> GetDistributionsByLecturerIdAsync(string lecturerId)
+        {
+            return await _context.AssignmentDistributions
+                .Where(d => d.LecturerId == lecturerId)
+                .Include(d => d.Lecturer)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<AssignmentDistribution>> GetDistributionsByLecturerAndAssignment(Guid assignmentId, string lecturerId)
+        {
+            return await _context.AssignmentDistributions
+                .Where(d => d.AssignmentId == assignmentId && d.LecturerId == lecturerId)
+                .Include(d => d.Lecturer)
+                .ToListAsync();
+        }
+
+        public async Task AddRangeAsync(IEnumerable<AssignmentDistribution> distributions)
+        {
+            foreach (var distribution in distributions)
+            {
+                await _context.AssignmentDistributions.AddAsync(distribution);
+            }
+        }
     }
 }

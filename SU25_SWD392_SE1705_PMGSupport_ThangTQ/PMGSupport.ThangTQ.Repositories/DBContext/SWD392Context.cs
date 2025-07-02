@@ -293,7 +293,7 @@ public partial class SWD392Context : DbContext
 
             entity.ToTable("User");
 
-            entity.HasIndex(e => e.GoogleId, "UQ__User__0DA2E48296B29337").IsUnique();
+            entity.HasIndex(e => e.GoogleId);
 
             entity.HasIndex(e => e.Email, "UQ__User__AB6E61642408AB06").IsUnique();
 

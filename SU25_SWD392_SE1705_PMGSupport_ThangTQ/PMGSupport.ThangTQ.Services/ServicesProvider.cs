@@ -7,6 +7,8 @@ namespace PMGSupport.ThangTQ.Services
         IAssignmentService AssignmentService { get; }
         IUserService UserService { get; }
         ISubmissionService SubmissionService { get; }
+        IEmailService EmailService { get; }
+        IDistributionService DistributionService { get; }
     }
     public class ServicesProvider : IServicesProvider
     {
@@ -20,5 +22,7 @@ namespace PMGSupport.ThangTQ.Services
         public IAssignmentService AssignmentService => _serviceProvider.GetRequiredService<IAssignmentService>();
         public IUserService UserService => _serviceProvider.GetRequiredService<IUserService>();
         public ISubmissionService SubmissionService => _serviceProvider.GetRequiredService<ISubmissionService>();
+        public IEmailService EmailService => _serviceProvider.GetRequiredService<IEmailService>();
+        public IDistributionService DistributionService => _serviceProvider.GetRequiredService<IDistributionService>();
     }
 }

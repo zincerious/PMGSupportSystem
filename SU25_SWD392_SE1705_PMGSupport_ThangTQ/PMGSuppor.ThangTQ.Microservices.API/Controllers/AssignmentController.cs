@@ -143,5 +143,33 @@ namespace PMGSuppor.ThangTQ.Microservices.API.Controllers
             var zipFileName = $"Assignment_{id}.zip";
             return File(memoryStream.ToArray(), "application/zip", zipFileName);
         }
+
+        [Authorize(Roles = "DepartmentLeader")]
+        [HttpPost("assign-lecturers/{assignmentId}")]
+        public async Task<IActionResult> AutoAssignLecturersAsync([FromRoute] Guid assignmentId)
+        {
+            if (assignmentId == Guid.Empty)
+            {
+                return BadRequest("Empty assignment id.");
+            }
+            var assignment = await _servicesProvider.AssignmentService.GetAssignmentByIdAsync(assignmentId);
+            if (assignment == null)
+            {
+                return NotFound("Not found assignment");
+            }
+            var departmentLeaderId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(departmentLeaderId))
+            {
+                return Unauthorized("You must be logged in as Department Leader");
+            }
+
+            var result = await _servicesProvider.AssignmentService.AutoAssignLecturersAsync(departmentLeaderId, assignmentId);
+            if (!result)
+            {
+                return BadRequest("No submissions or lecturers available.");
+            }
+
+            return Ok("Lecturers assigned successfully!");
+        }
     }
 }

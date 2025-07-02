@@ -8,6 +8,7 @@ namespace PMGSupport.ThangTQ.Repositories
         AssignmentRepository AssignmentRepository { get; }
         UserRepository UserRepository { get; }
         SubmissionRepository SubmissionRepository { get; }
+        DistributionRepository DistributionRepository { get; }
         JwtHelper JwtHelper { get; }
         Task<int> SaveChangesAsync();
     }
@@ -17,6 +18,7 @@ namespace PMGSupport.ThangTQ.Repositories
         private AssignmentRepository? _assignmentRepository;
         private UserRepository? _userRepository;
         private SubmissionRepository? _submissionRepository;
+        private DistributionRepository? _distributionRepository;
         private readonly JwtHelper _jwtHelper;
         public UnitOfWork(SWD392Context context, JwtHelper jwtHelper)
         {
@@ -42,6 +44,14 @@ namespace PMGSupport.ThangTQ.Repositories
             get
             {
                 return _submissionRepository ??= new SubmissionRepository(_context);
+            }
+        }
+
+        public DistributionRepository DistributionRepository
+        {
+            get
+            {
+                return _distributionRepository ??= new DistributionRepository(_context);
             }
         }
         public JwtHelper JwtHelper => _jwtHelper;
