@@ -2,6 +2,7 @@
 using PMGSupport.ThangTQ.Repositories;
 using PMGSupport.ThangTQ.Repositories.Models;
 using System.IO.Compression;
+using System.Linq.Expressions;
 
 namespace PMGSupport.ThangTQ.Services
 {
@@ -10,7 +11,7 @@ namespace PMGSupport.ThangTQ.Services
         Task<bool> UploadSubmissionsAsync(Guid assignmentId, IFormFile zipFile, string examinerId);
         Task<IEnumerable<Submission>?> GetSubmissionsByAssignmentIdAsync(Guid assignmentId);
         Task<IEnumerable<Submission>?> GetSubmissionsAsync();
-        Task<(IEnumerable<Submission>? submissions, int TotalCount)> GetSubmissionsByAssignmentAsync(Guid assignmentId);
+        Task<IEnumerable<Submission>?> GetSubmissionsByAssignmentAndStudentsAsync(Guid assignmentId, IEnumerable<string> studentId);
     }
     public class SubmissionService : ISubmissionService
     {
@@ -18,6 +19,11 @@ namespace PMGSupport.ThangTQ.Services
         public SubmissionService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+        }
+
+        public async Task<IEnumerable<Submission>?> GetSubmissionsByAssignmentAndStudentsAsync(Guid assignmentId, IEnumerable<string> studentId)
+        {
+            return await _unitOfWork.SubmissionRepository.GetSubmissionsByAssignmentAndStudentsAsync(assignmentId, studentId);
         }
 
         public async Task<bool> UploadSubmissionsAsync(Guid assignmentId, IFormFile zipFile, string examinerId)
@@ -133,11 +139,6 @@ namespace PMGSupport.ThangTQ.Services
         public Task<IEnumerable<Submission>?> GetSubmissionsAsync()
         {
             return _unitOfWork.SubmissionRepository.GetSubmissionsAsync();
-        }
-
-        public Task<(IEnumerable<Submission>? submissions, int TotalCount)> GetSubmissionsByAssignmentAsync(Guid assignmentId)
-        {
-            throw new NotImplementedException();
         }
     }
 }

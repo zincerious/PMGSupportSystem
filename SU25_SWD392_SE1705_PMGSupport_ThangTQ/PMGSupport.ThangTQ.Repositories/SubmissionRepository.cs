@@ -20,7 +20,7 @@ namespace PMGSupport.ThangTQ.Repositories
             await _context.SaveChangesAsync();
         }   
 
-        public async Task<Submission?> GetAssignmentByStudentIdAsync(string studentId)
+        public async Task<Submission?> GetSubmissionByStudentIdAsync(string studentId)
         {
             return await _context.Submissions
                 .Include(a => a.Student)
@@ -41,11 +41,21 @@ namespace PMGSupport.ThangTQ.Repositories
                 .Include(s => s.Student)
                 .ToListAsync();
         }
+
+        public async Task<IEnumerable<Submission>?> GetSubmissionsByAssignmentAndStudentsAsync(Guid assignmentId, IEnumerable<string> studentIds)
+        {
+            return await _context.Submissions
+                .Where(s => s.AssignmentId == assignmentId && studentIds.Contains(s.StudentId))
+                .Include(s => s.Student)
+                .ToListAsync();
+        }
+
         public async Task<Submission?> GetSubmissionByIdAsync(Guid id)
         {
             return await _context.Submissions
                 .Include(s => s.Student)
                 .FirstOrDefaultAsync(s => s.Id == id);
         }
+
     }
 }

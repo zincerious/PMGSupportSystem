@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using PMGSuppor.ThangTQ.Repositories.ConfigurationModels;
+using PMGSupport.ThangTQ.Repositories.ConfigurationModels;
 using PMGSupport.ThangTQ.Repositories.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
