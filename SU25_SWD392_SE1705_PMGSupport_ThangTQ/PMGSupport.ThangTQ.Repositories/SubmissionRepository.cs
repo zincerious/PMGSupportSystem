@@ -57,5 +57,25 @@ namespace PMGSupport.ThangTQ.Repositories
                 .FirstOrDefaultAsync(s => s.Id == id);
         }
 
+        public async Task<IEnumerable<Submission>> GetSubmissionsForNextRoundAsync(Guid assignmentId, int roundNumber)
+        {
+            var submissions = await _context.Submissions.Include(s => s.Student).Where(s => s.AssignmentId == assignmentId).ToListAsync();
+
+            if (roundNumber == 1)
+            {
+                return submissions.Where(s =>
+                    !_context.GradeRounds.Any(gr =>
+                            gr.Grade.AssignmentId == assignmentId && gr.Grade.StudentId == s.StudentId)).ToList();
+            }
+            else
+            {
+                return submissions.Where(s =>
+                    _context.GradeRounds.Any(gr => 
+                        gr.Grade.AssignmentId == assignmentId
+                        && gr.Grade.StudentId == s.StudentId
+                        && gr.RoundNumber == (roundNumber - 1))).ToList();
+            }
+        }
+
     }
 }

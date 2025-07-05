@@ -1,2 +1,14 @@
 wwwroot\BaremFiles\PMG201c_Barem_EX0001_26062025_045605.pdf
+wwwroot\BaremFiles\PMG201c_Barem_EX0001_30062025_030639.pdf
 wwwroot\ExamPapers\PMG201c_EX0001_26062025_042033.png
+wwwroot\ExamPapers\PMG201c_EX0001_30062025_025757.png
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file1.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file10.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file2.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file3.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file4.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file5.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file6.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file7.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file8.txt
+wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\file9.txt
