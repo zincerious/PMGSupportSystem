@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eGIFcRNe2Dc=",
+  "dgSpecHash": "ndXZ+ZGYwvs=",
   "success": true,
   "projectFilePath": "D:\\DotNet\\PMGSupportSystem\\SU25_SWD392_SE1705_PMGSupport_ThangTQ\\PMGSupport.ThangTQ.Services\\PMGSupport.ThangTQ.Services.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\issei\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\issei\\.nuget\\packages\\google.apis\\1.70.0\\google.apis.1.70.0.nupkg.sha512",
     "C:\\Users\\issei\\.nuget\\packages\\google.apis.auth\\1.70.0\\google.apis.auth.1.70.0.nupkg.sha512",
+    "C:\\Users\\issei\\.nuget\\packages\\google.apis.calendar.v3\\1.69.0.3746\\google.apis.calendar.v3.1.69.0.3746.nupkg.sha512",
     "C:\\Users\\issei\\.nuget\\packages\\google.apis.core\\1.70.0\\google.apis.core.1.70.0.nupkg.sha512",
     "C:\\Users\\issei\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\issei\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",

@@ -9,6 +9,7 @@
       "PMGSuppor.ThangTQ.Microservices.API/1.0.0": {
         "dependencies": {
           "Google.Apis.Auth": "1.70.0",
+          "Google.Apis.Calendar.v3": "1.69.0.3746",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.17",
           "Microsoft.EntityFrameworkCore": "9.0.6",
           "Microsoft.EntityFrameworkCore.Design": "9.0.6",
@@ -82,6 +83,18 @@
           "lib/net6.0/Google.Apis.Auth.dll": {
             "assemblyVersion": "1.70.0.0",
             "fileVersion": "1.70.0.0"
+          }
+        }
+      },
+      "Google.Apis.Calendar.v3/1.69.0.3746": {
+        "dependencies": {
+          "Google.Apis": "1.70.0",
+          "Google.Apis.Auth": "1.70.0"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.Calendar.v3.dll": {
+            "assemblyVersion": "1.69.0.3746",
+            "fileVersion": "1.69.0.3746"
           }
         }
       },
@@ -1235,6 +1248,8 @@
       },
       "PMGSupport.ThangTQ.Repositories/1.0.0": {
         "dependencies": {
+          "Google.Apis.Auth": "1.70.0",
+          "Google.Apis.Calendar.v3": "1.69.0.3746",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore": "9.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
@@ -1255,6 +1270,7 @@
       "PMGSupport.ThangTQ.Services/1.0.0": {
         "dependencies": {
           "Google.Apis.Auth": "1.70.0",
+          "Google.Apis.Calendar.v3": "1.69.0.3746",
           "Microsoft.EntityFrameworkCore": "9.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.6",
           "Microsoft.Extensions.Configuration": "8.0.0",
@@ -1306,6 +1322,13 @@
       "sha512": "sha512-2gnpcYUaD5WS2/2922J+ji1tEKcNtxu+aQoiNVWhfcGwDqgcc5vk6ND6591M2UaGzJn0EdH325rsNHzi/MvA/A==",
       "path": "google.apis.auth/1.70.0",
       "hashPath": "google.apis.auth.1.70.0.nupkg.sha512"
+    },
+    "Google.Apis.Calendar.v3/1.69.0.3746": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CyHv8R2wYP5R6R1iQBw1HSd5/cAQ2tDSDEykVYmmm+Nv1YyuW3sQtbwBye37xGotmzQeGUKtYw+/y0Us9VAh+Q==",
+      "path": "google.apis.calendar.v3/1.69.0.3746",
+      "hashPath": "google.apis.calendar.v3.1.69.0.3746.nupkg.sha512"
     },
     "Google.Apis.Core/1.70.0": {
       "type": "package",

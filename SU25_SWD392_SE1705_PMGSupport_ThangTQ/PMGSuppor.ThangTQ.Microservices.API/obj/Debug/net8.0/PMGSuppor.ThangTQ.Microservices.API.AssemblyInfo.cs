@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PMGSuppor.ThangTQ.Microservices.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc2a2d2ab0a9a859aa75c0a9235376772479965b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6de8880d9b90f5a0be1f1a88913b26151c6ca65e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PMGSuppor.ThangTQ.Microservices.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PMGSuppor.ThangTQ.Microservices.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
