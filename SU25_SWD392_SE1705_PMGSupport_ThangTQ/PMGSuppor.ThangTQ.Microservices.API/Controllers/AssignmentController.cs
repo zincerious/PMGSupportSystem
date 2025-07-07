@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PMGSuppor.ThangTQ.Microservices.API.DTOs;
 using PMGSupport.ThangTQ.Repositories.Models;
 using PMGSupport.ThangTQ.Services;
+using System.IO.Compression;
 using System.Security.Claims;
 
 namespace PMGSuppor.ThangTQ.Microservices.API.Controllers
@@ -106,6 +107,69 @@ namespace PMGSuppor.ThangTQ.Microservices.API.Controllers
                 Items = assignments.Items,
                 TotalCount = assignments.TotalCount
             });
+        }
+
+        [Authorize(Roles = "Lecturer")]
+        [HttpGet("download-exam-files/{id}")]
+        public async Task<IActionResult> DownloadExamFilesAsync([FromRoute] Guid id)
+        {
+            var examFiles = await _servicesProvider.AssignmentService.GetExamFilesByAssignmentIdAsync(id);
+            if (string.IsNullOrEmpty(examFiles.ExamFilePath) || string.IsNullOrEmpty(examFiles.BaremFilePath))
+            {
+                return NotFound("Exam paper or Barem not found for this assignment");
+            }
+
+            using var memoryStream = new MemoryStream();
+            using (var zip = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
+            {
+                if (System.IO.File.Exists(examFiles.ExamFilePath))
+                {
+                    var examPaperBytes = await System.IO.File.ReadAllBytesAsync(examFiles.ExamFilePath);
+                    var zipEntry = zip.CreateEntry(Path.GetFileName(examFiles.ExamFilePath));
+                    using var entryStream = zipEntry.Open();
+                    await entryStream.WriteAsync(examPaperBytes);
+                }
+
+                if (System.IO.File.Exists(examFiles.BaremFilePath))
+                {
+                    var baremBytes = await System.IO.File.ReadAllBytesAsync(examFiles.BaremFilePath);
+                    var zipEntry = zip.CreateEntry(Path.GetFileName(examFiles.BaremFilePath));
+                    using var entryStream = zipEntry.Open();
+                    await entryStream.WriteAsync(baremBytes);
+                }
+            }
+
+            memoryStream.Position = 0;
+            var zipFileName = $"Assignment_{id}.zip";
+            return File(memoryStream.ToArray(), "application/zip", zipFileName);
+        }
+
+        [Authorize(Roles = "DepartmentLeader")]
+        [HttpPost("assign-lecturers/{assignmentId}")]
+        public async Task<IActionResult> AutoAssignLecturersAsync([FromRoute] Guid assignmentId)
+        {
+            if (assignmentId == Guid.Empty)
+            {
+                return BadRequest("Empty assignment id.");
+            }
+            var assignment = await _servicesProvider.AssignmentService.GetAssignmentByIdAsync(assignmentId);
+            if (assignment == null)
+            {
+                return NotFound("Not found assignment");
+            }
+            var departmentLeaderId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(departmentLeaderId))
+            {
+                return Unauthorized("You must be logged in as Department Leader");
+            }
+
+            var result = await _servicesProvider.AssignmentService.AutoAssignLecturersAsync(departmentLeaderId, assignmentId);
+            if (!result)
+            {
+                return BadRequest("No submissions or lecturers available.");
+            }
+
+            return Ok("Lecturers assigned successfully!");
         }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PMGSuppor.ThangTQ.Microservices.API.DTOs;
+using PMGSupport.ThangTQ.Repositories.Models;
 using PMGSupport.ThangTQ.Services;
+using System.IO.Compression;
 using System.Security.Claims;
 
 namespace PMGSuppor.ThangTQ.Microservices.API.Controllers
@@ -44,6 +46,64 @@ namespace PMGSuppor.ThangTQ.Microservices.API.Controllers
             }
 
             return Ok("Submissions uploaded successfully.");
+        }
+
+        [Authorize(Roles = "Lecturer")]
+        [HttpGet("download-submissions/{assignmentId}")]
+        public async Task<IActionResult> DownloadSubmissionsAsync([FromRoute] Guid assignmentId)
+        {
+            if (assignmentId == Guid.Empty)
+            {
+                return BadRequest("Empty assignment id.");
+            }
+
+            var assignment = await _servicesProvider.AssignmentService.GetAssignmentByIdAsync(assignmentId);
+            if (assignment == null)
+            {
+                return NotFound("Not found assignment.");
+            }
+
+            var lecturerId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (string.IsNullOrEmpty(lecturerId))
+            {
+                return Unauthorized("Not lecturer role.");
+            }
+
+            var distributions = await _servicesProvider.DistributionService.GetDistributionsByLecturerIdAndAssignmentIdAsync(assignmentId, lecturerId);
+            if (distributions == null || !distributions.Any())
+            {
+                return NotFound("Not found distributions.");
+            }
+
+            var studentIds = distributions.Select(d => d.StudentId).ToList();
+
+            var submissions = await _servicesProvider.SubmissionService.GetSubmissionsByAssignmentAndStudentsAsync(assignmentId, studentIds);
+            if (submissions == null || !submissions.Any())
+            {
+                return NotFound("Not found submissions.");
+            }
+
+            using var memoryStream = new MemoryStream();
+            using (var zip = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
+            {
+                foreach (var submission in submissions)
+                {
+                    if (System.IO.File.Exists(submission.FilePath))
+                    {
+                        var fileBytes = await System.IO.File.ReadAllBytesAsync(submission.FilePath);
+                        var studentName = submission.Student.FullName ?? "Unknown";
+                        var fileNameInZip = $"{studentName}_{submission.StudentId}{Path.GetExtension(submission.FilePath)}";
+
+                        var zipEntry =  zip.CreateEntry(fileNameInZip);
+                        using var entryStream = zipEntry.Open();
+                        await entryStream.WriteAsync(fileBytes);
+                    }
+                }
+            }
+
+            memoryStream.Position = 0;
+            var zipFileName = $"Submissions_{assignmentId}.zip";
+            return File(memoryStream.ToArray(), "application/zip", zipFileName);
         }
     }
 }

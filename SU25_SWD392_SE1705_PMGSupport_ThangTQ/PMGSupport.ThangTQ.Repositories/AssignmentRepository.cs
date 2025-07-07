@@ -54,7 +54,7 @@ namespace PMGSupport.ThangTQ.Repositories
                     return false;
                 }
                 var fileName = $"PMG201c_Barem_{examinerId}_{uploadedAt:ddMMyyyy_HHmmss}{extension}";
-                var folderPath = Path.Combine("wwwroot", "BaremFiles");
+                var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "BaremFiles");
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
@@ -72,6 +72,7 @@ namespace PMGSupport.ThangTQ.Repositories
                 assignment.BaremPath = filePath;
                 assignment.Status = "Barem Uploaded";
                 await UpdateAsync(assignment);
+                await SaveChangesAsync();
 
                 return true;
             }
@@ -143,6 +144,17 @@ namespace PMGSupport.ThangTQ.Repositories
                 .Where(a => a.ExaminerId == examinerId)
                 .OrderByDescending(a => a.UploadedAt)
                 .ToListAsync();
+        }
+
+        public async Task<(string? ExamFilePath, string? BaremFilePath)> GetExamFilesByAssignmentIdAsync(Guid id)
+        {
+            var assignment = await GetAssignmentByIdAsync(id);
+            if (assignment == null || string.IsNullOrEmpty(assignment.FilePath) || string.IsNullOrEmpty(assignment.BaremPath))
+            {
+                return (null, null);
+            }
+
+            return (assignment.FilePath, assignment.BaremPath);
         }
     }
 }

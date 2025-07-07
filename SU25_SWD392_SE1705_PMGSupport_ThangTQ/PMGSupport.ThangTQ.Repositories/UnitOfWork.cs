@@ -8,6 +8,9 @@ namespace PMGSupport.ThangTQ.Repositories
         AssignmentRepository AssignmentRepository { get; }
         UserRepository UserRepository { get; }
         SubmissionRepository SubmissionRepository { get; }
+        DistributionRepository DistributionRepository { get; }
+        GradeRoundRepository GradeRoundRepository { get; }
+        GradeRepository GradeRepository { get; }
         JwtHelper JwtHelper { get; }
         Task<int> SaveChangesAsync();
     }
@@ -17,6 +20,9 @@ namespace PMGSupport.ThangTQ.Repositories
         private AssignmentRepository? _assignmentRepository;
         private UserRepository? _userRepository;
         private SubmissionRepository? _submissionRepository;
+        private DistributionRepository? _distributionRepository;
+        private GradeRoundRepository? _gradeRoundRepository;
+        private GradeRepository? _gradeRepository;
         private readonly JwtHelper _jwtHelper;
         public UnitOfWork(SWD392Context context, JwtHelper jwtHelper)
         {
@@ -42,6 +48,29 @@ namespace PMGSupport.ThangTQ.Repositories
             get
             {
                 return _submissionRepository ??= new SubmissionRepository(_context);
+            }
+        }
+
+        public DistributionRepository DistributionRepository
+        {
+            get
+            {
+                return _distributionRepository ??= new DistributionRepository(_context);
+            }
+        }
+
+        public GradeRoundRepository GradeRoundRepository
+        {
+            get
+            {
+                return _gradeRoundRepository ??= new GradeRoundRepository(_context);
+            }
+        }
+        public GradeRepository GradeRepository
+        {
+            get
+            {
+                return _gradeRepository ??= new GradeRepository(_context);
             }
         }
         public JwtHelper JwtHelper => _jwtHelper;
