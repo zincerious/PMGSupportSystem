@@ -36,10 +36,4 @@
     <Folder Include="wwwroot\Submissions\5b2edf1f-195e-4b84-8977-e79a464c1349\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Update="credentials.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>

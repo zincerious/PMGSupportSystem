@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace PMGSupport.ThangTQ.Repositories.Models;
 
@@ -20,24 +21,24 @@ public partial class User
     public string StudentCode { get; set; }
 
     public DateTime CreatedAt { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<AssignmentDistribution> AssignmentDistributionAssignedByNavigations { get; set; } = new List<AssignmentDistribution>();
-
+    [JsonIgnore]
     public virtual ICollection<AssignmentDistribution> AssignmentDistributionLecturers { get; set; } = new List<AssignmentDistribution>();
-
+    [JsonIgnore]
     public virtual ICollection<AssignmentDistribution> AssignmentDistributionStudents { get; set; } = new List<AssignmentDistribution>();
-
+    [JsonIgnore]
     public virtual ICollection<Assignment> Assignments { get; set; } = new List<Assignment>();
-
+    [JsonIgnore]
     public virtual ICollection<Grade> GradeConfirmByNavigations { get; set; } = new List<Grade>();
-
+    [JsonIgnore]
     public virtual ICollection<GradeRound> GradeRoundCoLecturers { get; set; } = new List<GradeRound>();
-
+    [JsonIgnore]
     public virtual ICollection<GradeRound> GradeRoundLecturers { get; set; } = new List<GradeRound>();
-
+    [JsonIgnore]
     public virtual ICollection<Grade> GradeStudents { get; set; } = new List<Grade>();
-
+    [JsonIgnore]
     public virtual ICollection<RegradeRequest> RegradeRequests { get; set; } = new List<RegradeRequest>();
-
+    [JsonIgnore]
     public virtual ICollection<Submission> Submissions { get; set; } = new List<Submission>();
 }

@@ -2,6 +2,7 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace PMGSupport.ThangTQ.Repositories.Models;
 
@@ -18,12 +19,12 @@ public partial class Assignment
     public DateTime UploadedAt { get; set; }
 
     public string Status { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<AssignmentDistribution> AssignmentDistributions { get; set; } = new List<AssignmentDistribution>();
 
     public virtual User Examiner { get; set; }
-
+    [JsonIgnore]
     public virtual ICollection<Grade> Grades { get; set; } = new List<Grade>();
-
+    [JsonIgnore]
     public virtual ICollection<Submission> Submissions { get; set; } = new List<Submission>();
 }
