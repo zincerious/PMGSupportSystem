@@ -132,11 +132,19 @@ namespace PMGSupport.ThangTQ.Services
             }
             else if (!rounds.Any(gr => gr.RoundNumber == 2))
             {
-                return await AutoAssignRound2Async(assignedByUserId, assignmentId, submissions!.ToList(), lecturers, users.ToList());
+                var gradesWithRegradeRequest = grades.Where(g => g.RegradeRequests != null && g.RegradeRequests.Any(rr => rr.Status == "Approved")).ToList();
+                if (gradesWithRegradeRequest.Any())
+                {
+                    return await AutoAssignRound2Async(assignedByUserId, assignmentId, submissions!.ToList(), lecturers, users.ToList());
+                }
             }
             else if (!rounds.Any(gr => gr.RoundNumber == 3))
             {
-                return await AutoAssignRound3Async(assignedByUserId, assignmentId);
+                var gradesWithRegradeRequest = grades.Where(g => g.RegradeRequests != null && g.RegradeRequests.Any(rr => rr.Status == "Approved")).ToList();
+                if (gradesWithRegradeRequest.Any())
+                {
+                    return await AutoAssignRound3Async(assignedByUserId, assignmentId);
+                }
             }
 
             return false;
@@ -197,7 +205,7 @@ namespace PMGSupport.ThangTQ.Services
             var newDistributions = new List<AssignmentDistribution>();
             var grades = await _unitOfWork.GradeRepository.GetAllAsync();
 
-            for (int i = 0; i <= submissions.Count; i++)
+            for (int i = 0; i < submissions.Count; i++)
             {
                 var submission = submissions[i];
                 int j = i % lecturers.Count();
@@ -258,7 +266,10 @@ namespace PMGSupport.ThangTQ.Services
             var grades = await _unitOfWork.GradeRepository.GetByAssignmentIdAsync(assignmentId);
             var newGradeRounds = new List<GradeRound>();
 
-            foreach (var grade in grades)
+            var gradesWithRegradeRequest = grades.Where(g => g.RegradeRequests != null && g.RegradeRequests.Any(rr => rr.Status == "Approved")).ToList();
+            if (!gradesWithRegradeRequest.Any()) return false;
+
+            foreach (var grade in gradesWithRegradeRequest)
             {
                 var submission = submissions.FirstOrDefault(s => s.StudentId == grade.StudentId);
                 if (submission == null) continue;
@@ -303,7 +314,10 @@ namespace PMGSupport.ThangTQ.Services
             var now = DateTime.Now;
             var newGradeRounds = new List<GradeRound>();
 
-            foreach (var grade in gradesOfAssignment)
+            var gradesWithRegradeRequest = gradesOfAssignment.Where(g => g.RegradeRequests != null && g.RegradeRequests.Any(rr => rr.Status == "Approved")).ToList();
+            if (!gradesWithRegradeRequest.Any()) return false;
+
+            foreach (var grade in gradesWithRegradeRequest)
             {
                 var roundsForStudent = gradeRounds.Where(gr => gr.GradeId == grade.Id).OrderBy(gr => gr.RoundNumber).ToList();
                 if (roundsForStudent.Count < 2)
@@ -320,7 +334,7 @@ namespace PMGSupport.ThangTQ.Services
                     continue;
                 }
 
-                var roomName = $"Review-{Guid.NewGuid().ToString()}";
+                var roomName = $"Review-{assignmentId:N}-{Guid.NewGuid():N}";
                 var meetingUrl = $"https://meet.jit.si/{roomName}";
 
                 var gradeRound = new GradeRound
@@ -343,9 +357,11 @@ namespace PMGSupport.ThangTQ.Services
                            $"Meeting link: <a href='{meetingUrl}'>{meetingUrl}</a><br/>" +
                            $"Scheduled at: {gradeRound.ScheduleAt}";
 
-                await _emailService.SendMailAsync(lecturer1.Email, subject, body);
-                await _emailService.SendMailAsync(lecturer2.Email, subject, body);
-                await _emailService.SendMailAsync(student.Email, subject, body);
+                var task = new List<Task>();
+                task.Add(_emailService.SendMailAsync(lecturer1.Email, subject, body));
+                task.Add(_emailService.SendMailAsync(lecturer2.Email, subject, body));
+                task.Add(_emailService.SendMailAsync(student.Email, subject, body));
+                await Task.WhenAll(task);
             }
 
             if (newGradeRounds.Any())
