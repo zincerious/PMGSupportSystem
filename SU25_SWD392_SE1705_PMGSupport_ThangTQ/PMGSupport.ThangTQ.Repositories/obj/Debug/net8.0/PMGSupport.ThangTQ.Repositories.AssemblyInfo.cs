@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PMGSupport.ThangTQ.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6de8880d9b90f5a0be1f1a88913b26151c6ca65e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+baa4ba89ee2937545faceb5094b5dfa16ec3878a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PMGSupport.ThangTQ.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PMGSupport.ThangTQ.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
