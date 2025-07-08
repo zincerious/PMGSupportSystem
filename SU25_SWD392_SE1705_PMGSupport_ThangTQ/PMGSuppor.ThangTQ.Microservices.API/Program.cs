@@ -8,6 +8,7 @@ using PMGSupport.ThangTQ.Repositories.DBContext;
 using PMGSupport.ThangTQ.Repositories.Helpers;
 using PMGSupport.ThangTQ.Services;
 using System.Security.Claims;
+using PMGSuppor.ThangTQ.Microservices.API.Extension;
 
 namespace PMGSuppor.ThangTQ.Microservices.API
 {
@@ -36,6 +37,7 @@ namespace PMGSuppor.ThangTQ.Microservices.API
                      }
                 );
             });
+            builder.Services.RegisterServices(builder.Configuration);
             builder.Services.AddDbContext<SWD392Context>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

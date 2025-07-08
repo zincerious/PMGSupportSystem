@@ -5,9 +5,11 @@ namespace PMGSupport.ThangTQ.Repositories
 {
     public interface IUnitOfWork
     {
+        GradeRepository GradeRepository { get; }
         AssignmentRepository AssignmentRepository { get; }
         UserRepository UserRepository { get; }
         SubmissionRepository SubmissionRepository { get; }
+        
         JwtHelper JwtHelper { get; }
         Task<int> SaveChangesAsync();
     }
@@ -18,11 +20,21 @@ namespace PMGSupport.ThangTQ.Repositories
         private UserRepository? _userRepository;
         private SubmissionRepository? _submissionRepository;
         private readonly JwtHelper _jwtHelper;
+        private GradeRepository _gradeRepository;
         public UnitOfWork(SWD392Context context, JwtHelper jwtHelper)
         {
             _context = context;
             _jwtHelper = jwtHelper;
         }
+
+        public GradeRepository GradeRepository
+        {
+            get
+            {
+                return _gradeRepository ??= new GradeRepository(_context);
+            }
+        }
+
         public AssignmentRepository AssignmentRepository
         {
             get
