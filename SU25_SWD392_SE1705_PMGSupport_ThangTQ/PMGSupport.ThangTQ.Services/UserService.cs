@@ -1,4 +1,6 @@
-﻿using Google.Apis.Auth;
+﻿using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Google.Apis.Auth;
 using PMGSupport.ThangTQ.Repositories;
 using PMGSupport.ThangTQ.Repositories.Models;
 
@@ -10,6 +12,7 @@ namespace PMGSupport.ThangTQ.Services
         Task<User?> GetUserByIdAsync(string userId);
         Task<User?> GetUserByEmailAsync(string email);
         Task<IEnumerable<User>> GetUsersAsync();
+        Task<IEnumerable<User>> ImportUsersFromExcelAsync(Stream excelStream);
     }
     public class UserService : IUserService
     {
@@ -71,6 +74,38 @@ namespace PMGSupport.ThangTQ.Services
 
             var jwt = _unitOfWork.JwtHelper.GenerateToken(user);
             return jwt;
+        }
+
+        public async Task<IEnumerable<User>> ImportUsersFromExcelAsync(Stream excelStream)
+        {
+            var users = new List<User>();
+
+            using (var workbook = new XLWorkbook(excelStream))
+            {
+                var worksheet = workbook.Worksheet(1);
+                var rows = worksheet.RangeUsed()!.RowsUsed().Skip(1);
+
+                foreach (var row in rows)
+                {
+                    var user = new User
+                    {
+                        Id = row.Cell(1).GetValue<string>()?.Trim(),
+                        FullName = row.Cell(2).GetValue<string>()?.Trim(),
+                        Email = row.Cell(3).GetValue<string>()?.Trim(),
+                        GoogleId = "",
+                        Role = row.Cell(4).GetValue<string>()?.Trim(),
+                        StudentCode = row.Cell(5).GetValue<string>()?.Trim(),
+                        CreatedAt = DateTime.Now,
+                    };
+
+                    users.Add(user);
+                }
+            }
+
+            await _unitOfWork.UserRepository.AddRangeAsync(users);
+            await _unitOfWork.SaveChangesAsync();
+
+            return users;
         }
     }
 }

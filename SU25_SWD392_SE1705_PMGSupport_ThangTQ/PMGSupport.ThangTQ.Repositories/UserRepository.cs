@@ -23,5 +23,10 @@ namespace PMGSupport.ThangTQ.Repositories
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
+
+        public async Task AddRangeAsync(IEnumerable<User> users)
+        {
+            await _context.Users.AddRangeAsync(users);
+        }
     }
 }

@@ -20,6 +20,14 @@ namespace PMGSuppor.ThangTQ.Microservices.API
             if (jwtSettings == null || string.IsNullOrEmpty(jwtSettings.Key))
                 throw new Exception("Invalid JWT settings in configuration.");
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
             builder.Services.AddControllers();
 
             builder.Services.AddEndpointsApiExplorer();
@@ -99,7 +107,7 @@ namespace PMGSuppor.ThangTQ.Microservices.API
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseCors("AllowAll");
             app.UseStaticFiles();
             app.MapControllers();
 
